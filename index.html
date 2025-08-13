@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="color-scheme" content="light dark" />
+  <title>贪吃蛇</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hud">
+      <div class="scores">
+        <span>分数：<strong id="score">0</strong></span>
+        <span>最高分：<strong id="highScore">0</strong></span>
+      </div>
+      <div class="controls">
+        <button id="restartBtn" type="button">重开</button>
+      </div>
+    </header>
+    <main class="stage">
+      <canvas id="game" tabindex="0" aria-label="Snake Game Canvas"></canvas>
+      <div id="overlay" class="overlay hidden" aria-live="polite" aria-atomic="true">
+        <div class="overlay-content">
+          <p id="overlayText">暂停</p>
+          <button id="overlayRestart" type="button">重开</button>
+        </div>
+      </div>
+    </main>
+    <footer class="tips">
+      <p>方向键/WASD 控制，空格或 P 暂停，R 或回车重开</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
