@@ -1,0 +1,12 @@
+/* 基础布局与主题 */
+:root{ --bg:#0f1220; --panel:#181c2f; --accent:#22c55e; --accent-2:#16a34a; --text:#e5e7eb; --muted:#9ca3af; }
+*{box-sizing:border-box} html,body{height:100%} body{margin:0; background:var(--bg); color:var(--text); font:14px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; overflow:hidden}
+.app{height:100%; display:grid; grid-template-rows:auto 1fr auto; place-items:center; gap:12px; padding:12px}
+.hud,.tips{width:min(100%, 960px); display:flex; align-items:center; justify-content:space-between; gap:12px}
+.scores{display:flex; gap:16px}
+.scores strong{color:var(--accent)}
+.controls button, .overlay-content button{padding:6px 12px; border:1px solid #333; border-radius:6px; background:var(--accent); color:#091018; font-weight:600; cursor:pointer} .controls button:hover{background:var(--accent-2)}
+.stage{position:relative; display:grid; place-items:center; width:100%; height:100%}
+#game{display:block; background:var(--panel); border:1px solid #1f2340; border-radius:8px; image-rendering:pixelated; outline:none}
+.overlay{position:absolute; inset:0; display:grid; place-items:center; background:rgba(0,0,0,.45); backdrop-filter:saturate(120%) blur(2px)} .overlay.hidden{display:none}
+.overlay-content{background:rgba(24,28,47,.9); padding:16px 20px; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,.35); text-align:center; min-width:220px} .overlay-content p{margin:0 0 10px; font-size:16px}
